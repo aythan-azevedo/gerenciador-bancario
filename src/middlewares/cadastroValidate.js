@@ -8,9 +8,9 @@ const mandatory  = (nome,cpf) => {
   return true
 };
 
-const valideEmailExist = async (cpf) => {
+const valideteCPFExist = async (cpf) => {
   const exist = await userModel.getByCPF(cpf); 
- 
+//  console.log(exist)
   if (exist) {
     return { err: { message: 'Email already registered' } };
     }
@@ -19,5 +19,5 @@ const valideEmailExist = async (cpf) => {
 
 module.exports = { 
   mandatory,
-
+  valideteCPFExist,
  };

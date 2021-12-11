@@ -1,17 +1,23 @@
+
 const { MongoClient } = require('mongodb');
 
-const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
-const DB_NAME = 'bank';
-
-const connection = () => MongoClient
-  .connect(MONGO_DB_URL, {
+const OPTIONS = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  })
-  .then((conn) => conn.db(DB_NAME))
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  });
+}
+
+const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
+
+let db = null;
+
+const connection = () => {
+    return db
+    ? Promise.resolve(db)
+    : MongoClient.connect(MONGO_DB_URL, OPTIONS)
+    .then((conn) => {
+    db = conn.db('bank');
+    return db;
+    })
+};
 
 module.exports = { connection };

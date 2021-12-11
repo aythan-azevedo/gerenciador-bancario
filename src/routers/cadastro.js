@@ -6,4 +6,5 @@ const cadastroController = require('../controllers/cadastroController');
 
 router.post('/', cadastroController.createAcount);
 
+
 module.exports = router; 
