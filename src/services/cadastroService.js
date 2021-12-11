@@ -9,15 +9,13 @@ const createAcount = async (nome, cpf) => {
   }
   
   const exist = await userModel.getByCPF(cpf);
-  
-
 
   if (exist ) {
     return { message: 'Email already registered' };
   }
 
-const recipe = await userModel.createAcount({ nome,cpf });
-return recipe;
+const acount = await userModel.createAcount({ nome,cpf });
+return acount;
 };
 
 module.exports = {

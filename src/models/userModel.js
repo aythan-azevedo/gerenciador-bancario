@@ -5,7 +5,7 @@ const getByCPF = async (cpf) => {
   const con = await connection()
    .then((db) => db.collection('acounts').findOne({ cpf }))
    .then((result) => result);
-   console.log(con)
+
   return con;
 };
 
