@@ -6,9 +6,9 @@ app.use(bodyParser.json());
 
 const PORT = 3000;
 
-const usersRouter = require('./src/routers/user');
+const cadastroRouter = require('./src/routers/cadastro');
 
-app.use('/user', usersRouter);
+app.use('/cadastro', cadastroRouter);
 
 app.listen(PORT, () => console.log(`online na porta ${PORT}`));
 

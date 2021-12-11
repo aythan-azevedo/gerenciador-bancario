@@ -1,13 +1,14 @@
 const { connection } = require('./connection');
 
 
-const createAcount = async ({ name, cpf }) => {
+const createAcount = async ({ nome, cpf }) => {
+  const saldo = 0;
   const resultado = await connection()
-  .then((db) => db.collection('acounts').insertOne({ name, cpf, saldo }))
+  .then((db) => db.collection('acounts').insertOne({ nome, cpf, saldo }))
   .then(({ insertedId: _id }) => ({
      user: {
        _id, 
-        name,
+        nome,
         cpf,
         saldo
         } }));
