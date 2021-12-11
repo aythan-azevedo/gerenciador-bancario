@@ -1,0 +1,19 @@
+{
+  "name": "gerenciador-bancario",
+  "version": "1.0.0",
+  "description": "servidor node para gerenciamento bancario",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aythan-azevedo/gerenciador-bancario.git"
+  },
+  "author": "progamador.aythana-zevedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aythan-azevedo/gerenciador-bancario/issues"
+  },
+  "homepage": "https://github.com/aythan-azevedo/gerenciador-bancario#readme"
+}
