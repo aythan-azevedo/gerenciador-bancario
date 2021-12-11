@@ -11,8 +11,8 @@ const getByCPF = async (cpf) => {
 
 const createAcount = async ({ nome, cpf }) => {
   const saldo = 0;
-  const resultado = await connection()
-  .then((db) => db.collection('acounts').insertOne({nome, cpf, saldo }));
+  const resultado = await connection();
+  resultado.then((db) => db.collection('acounts').insertOne({nome, cpf, saldo }));
 
   return getByCPF(cpf);
 };
