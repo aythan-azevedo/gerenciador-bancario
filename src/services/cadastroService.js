@@ -9,7 +9,7 @@ const createAcount = async (nome, cpf) => {
   }
   
   const exist = await userModel.getByCPF(cpf);
-console.log(exist)
+
   if ( exist !== null) {
     return { message: 'Email already registered' };
   }

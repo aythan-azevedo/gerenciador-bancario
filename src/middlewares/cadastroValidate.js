@@ -18,10 +18,10 @@ const mandatory  = (nome,cpf) => {
  };
  const numberPositive = async (valor) => {
 
-  if (valor < 0) {
-    return { err: { message: 'value must be positive' } };
+  if (valor < 0 || typeof valor !== 'number') {
+    return { err: { message: 'value must be positive and number' } };
     }
-    return false;
+    return true;
  };
 
 module.exports = { 
