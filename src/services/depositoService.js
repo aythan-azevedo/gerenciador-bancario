@@ -1,24 +1,20 @@
 const userModel = require('../models/userModel');
 const valid = require('../middlewares/cadastroValidate')
 
-const createAcount = async (nome, cpf) => {
-  const validation = valid.mandatory(nome,cpf);
+const update = async (valor, cpf) => {
+  const validation = valid.numberPositive(valor);
   
   if (validation !== true) {
     return validation;
   }
   
-  const exist = await userModel.getByCPF(cpf);
-console.log(exist)
-  if ( exist !== null) {
-    return { message: 'Email already registered' };
-  }
+ 
 
 const acount = await userModel.createAcount({ nome,cpf });
 return acount;
 };
 
 module.exports = {
-  createAcount,
+  update,
 }
 

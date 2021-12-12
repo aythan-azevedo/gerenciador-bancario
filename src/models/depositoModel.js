@@ -1,12 +1,13 @@
 const { connection } = require('./connection');
-const { getByCPF } = require('../models/userModel')
+const { getByCPF } = require('./userModel')
 
-const updateSaldo = async (id, bodys, userId) => {
-  const [name, ingredients, preparation] = bodys;
+const updateSaldo = async (valor, cpf) => {
+   const {nome , cpf}= getByCPF(cpf);
+const saldo = valor;
   const idList = await connection();
   await idList.collection('recipes')
   .updateOne({ _id: ObjectId(id) },
-  { $set: { name, ingredients, preparation } });
+  { $set: { nome, cpf, saldo } });
 
   return getByCPF
 };

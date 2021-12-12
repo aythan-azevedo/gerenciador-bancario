@@ -8,16 +8,24 @@ const mandatory  = (nome,cpf) => {
   return true
 };
 
-const valideteCPFExist = async (cpf) => {
+ const saldoPositivo = async (valor, cpf) => {
   const exist = await userModel.getByCPF(cpf); 
-//  console.log(exist)
-  if (exist) {
-    return { err: { message: 'Email already registered' } };
+
+  if (exist.saldo - valor < 0) {
+    return { err: { message: 'no funds' } };
+    }
+    return false;
+ };
+ const numberPositive = async (valor) => {
+
+  if (valor < 0) {
+    return { err: { message: 'value must be positive' } };
     }
     return false;
  };
 
 module.exports = { 
   mandatory,
-  valideteCPFExist,
+  saldoPositivo,
+  numberPositive
  };
