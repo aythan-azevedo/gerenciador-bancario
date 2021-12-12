@@ -4,7 +4,7 @@ const router = Router();
 
 const depositoController = require('../controllers/depositoModel');
 
-router.post('/', depositoController.update);
+router.put('/', depositoController.update);
 
 
 module.exports = router; 

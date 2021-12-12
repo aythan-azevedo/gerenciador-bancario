@@ -1,15 +1,17 @@
+const { ObjectId } = require('mongodb');
 const { connection } = require('./connection');
 const { getByCPF } = require('./userModel')
 
-const updateSaldo = async (valor, cpf) => {
-   const {nome }= getByCPF(cpf);
+
+const updateSaldo = async (valor, cpf, id) => {
+
 const saldo = valor;
   const idList = await connection();
-  await idList.collection('recipes')
+  await idList.collection('acounts')
   .updateOne({ _id: ObjectId(id) },
-  { $set: { nome, cpf, saldo } });
+  { $set: { saldo } });
 
-  return getByCPF
+  return getByCPF(cpf)
 };
 
 module.exports = {

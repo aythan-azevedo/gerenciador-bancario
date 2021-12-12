@@ -16,10 +16,10 @@ const mandatory  = (nome,cpf) => {
     }
     return false;
  };
- const numberPositive = async (valor) => {
+ const numberPositive =  (valor) => {
 
   if (valor < 0 || typeof valor !== 'number') {
-    return { err: { message: 'value must be positive and number' } };
+    return false;
     }
     return true;
  };

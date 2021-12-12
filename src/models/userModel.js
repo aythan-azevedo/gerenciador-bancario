@@ -18,8 +18,17 @@ const createAcount = async ({ nome, cpf }) => {
   return resultado;
 };
 
+const getallAcounts = async () => {
+  const con = await connection()
+  .then((db) => db.collection('acounts').find().toArray())
+  .then((result) => result);
+
+  return con;
+};
+
 
 module.exports = {
   getByCPF,
   createAcount,
+  getallAcounts,
 };
