@@ -2,7 +2,7 @@ const { connection } = require('./connection');
 const { getByCPF } = require('./userModel')
 
 const updateSaldo = async (valor, cpf) => {
-   const {nome , cpf}= getByCPF(cpf);
+   const {nome }= getByCPF(cpf);
 const saldo = valor;
   const idList = await connection();
   await idList.collection('recipes')
