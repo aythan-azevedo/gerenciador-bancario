@@ -32,3 +32,18 @@ exemplo: ![com sucesso](./public/create.png)
 ==> se tentar cadastrar mais de uma conta por cpf a api retorna : 
 ![sem sucesso](./public/registrado.png)
 
+## Deposito 
+
+insira esse endereço no cliente que você está usando com a modalidade post.
+`http://localhost:3000/deposito`
+e coloque o comando nele assim como no exemplo com o id da conta que você criou anteriormente , valor do deposito e o cpf.
+``` 
+{	
+	"id": "61bba79e1e4fd9cdabad3416",
+  "valor": 2000,
+  "cpf": 78945612305
+}
+```
+![sem sucesso](./public/deposito-sucesso.png)
+
+==> se o valor do deposito for negativo a api retorna a seguinte menssagem; 
