@@ -23,6 +23,10 @@ const update = async (valor, pagador_cpf, beneficiado_cpf) => {
 
 const  positiveSaldo = validSaldo.saldoPositivo(valor,pagador_cpf)
 
+if (positiveSaldo !== true) {
+  return { message: 'no funds' };
+}
+
 const idPagador = existPagador._id
 const idRecebedor = existrecebedor._id
 
