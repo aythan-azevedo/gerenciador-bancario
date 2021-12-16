@@ -1,8 +1,10 @@
 const userModel = require('../models/userModel')
+const { ObjectId } = require('mongodb');
 
 const deleteId = async (id) => {
+  // verifica se é um id valido
   if (!(ObjectId.isValid(id))) {
-    return { message: 'recipe not found' };
+    return { message: 'acount not found' };
 }
   
 const del = await userModel.deleteacount(id);

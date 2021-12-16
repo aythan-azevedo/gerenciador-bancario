@@ -10,9 +10,10 @@ const cadastroRouter = require('./src/routers/cadastro');
 const depositoRouter = require('./src/routers/deposit');
 const userRouter = require('./src/routers/user');
 const transferRouter = require('./src/routers/transfer');
+const deleteRouter = require('./src/routers/delete');
 
+app.use('/delete', deleteRouter);
 app.use('/transfer', transferRouter);
-
 app.use('/users', userRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/deposito', depositoRouter);

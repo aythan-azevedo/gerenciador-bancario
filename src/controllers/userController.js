@@ -1,5 +1,5 @@
 const userService = require('../services/userService')
-
+// recebe a infromação do service e rerona ela para o cliente com o respectivo codigo REST
 const getAll = async (req, res) => {
   const getAll = await userService.getAll();
   if (getAll) {

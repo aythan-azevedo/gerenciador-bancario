@@ -3,9 +3,9 @@ const { Router } = require('express');
 
 const router = Router();
 
-const depositoController = require('../controllers/depositoModel');
+const deleteController = require('../controllers/deleteController');
 
-router.put('/', depositoController.update);
+router.delete('/:id', deleteController.deleteId);
 
 
 module.exports = router; 

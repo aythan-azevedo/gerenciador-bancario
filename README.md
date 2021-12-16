@@ -22,6 +22,13 @@ e coloque o comando nele assim como no exemplo
   "cpf": 12345646853
 }
 ```
+==> crie 2 usuarios para testar a transferencia depois
+``` 
+{
+  "nome": "aylana",
+  "cpf": 78945612306
+}
+```
 exemplo: ![com sucesso](./public/create.png)
 
 ==> se voce tentar fazer uma conta só com o cpf ou só com o nome a api retorna : 
@@ -34,9 +41,9 @@ exemplo: ![com sucesso](./public/create.png)
 
 ## Deposito 
 
-insira esse endereço no cliente que você está usando com a modalidade post.
+==> insira esse endereço no cliente que você está usando com a modalidade put.
 `http://localhost:3000/deposito`
-e coloque o comando nele assim como no exemplo com o id da conta que você criou anteriormente , valor do deposito e o cpf.
+==> e coloque o comando nele assim como no exemplo com o id da conta que você criou anteriormente , valor do deposito e o cpf.
 ``` 
 {	
 	"id": "61bba79e1e4fd9cdabad3416",
@@ -60,3 +67,39 @@ e coloque o comando nele assim como no exemplo com o id da conta que você criou
 ![sem sucesso](./public/+10000.png)
 
 ## Transferir
+
+==> insira esse endereço no cliente que você está usando com a modalidade put.
+`http://localhost:3000/transfer`
+
+==> para tranferir é necessario o cpf do pagante e do recebedor assim como o valor:
+
+``` 
+{
+  "valor": 2000,
+  "pagador_cpf": 78945612305,
+  "beneficiado_cpf": 78945612306
+}
+```
+
+![sucesso](./public/tranferencia.png)
+
+==> quando se tenta transferir mais do que se tem na conta a api impede e responde :
+![sem sucesso](./public/sem-fundos.png)
+![sem sucesso](./public/not-founds.png)
+
+
+++>não tem nenhuma taxa para fazer transferencias ou depositos mas é possivel implementar isso em services.
+
+## extras
+==> você pode pegar todas as contas criadas pelo endpont com o verbo GET ao invez de post ou put:
+`http://localhost:3000/users`
+
+==> támbem é possivel deletar a conta atravéz do endpoint com o id da conta:
+
+`http://localhost:3000/delete/61bba79e1e4fd9cdabad3416`
+onde o id tem que ser adcionado como parametro na url
+
+
+==> por fim quero agradecer por ter chegado até aqui e comente no codigo dicas se achar que posso melhorar.
+
+## OBRIGADO.
