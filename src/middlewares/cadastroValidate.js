@@ -1,4 +1,3 @@
-const userModel = require('../models/userModel')
 
 const mandatory  = (nome,cpf) => {
 
@@ -7,15 +6,6 @@ const mandatory  = (nome,cpf) => {
   }
   return true
 };
-
- const saldoPositivo = async (valor, cpf) => {
-  const exist = await userModel.getByCPF(cpf); 
-
-  if (exist.saldo - valor < 0) {
-    return { err: { message: 'no funds' } };
-    }
-    return false;
- };
  const numberPositive =  (valor) => {
 
   if (valor < 0 || typeof valor !== 'number') {
@@ -26,6 +16,5 @@ const mandatory  = (nome,cpf) => {
 
 module.exports = { 
   mandatory,
-  saldoPositivo,
   numberPositive
  };

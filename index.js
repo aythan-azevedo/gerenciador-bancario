@@ -9,6 +9,9 @@ const PORT = 3000;
 const cadastroRouter = require('./src/routers/cadastro');
 const depositoRouter = require('./src/routers/deposit');
 const userRouter = require('./src/routers/user');
+const transferRouter = require('./src/routers/transfer');
+
+app.use('/transfer', transferRouter);
 
 app.use('/users', userRouter);
 app.use('/cadastro', cadastroRouter);

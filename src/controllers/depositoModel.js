@@ -5,7 +5,7 @@ const update = async (req, res) => {
   
 
   const acount = await depositoService.update(valor, cpf, id );
-  // console.log(acount)
+  console.log(acount)
   if (acount.message) {
       return res.status(400).json(acount);
   }

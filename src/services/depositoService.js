@@ -4,7 +4,7 @@ const depositoModel = require('../models/depositoModel')
 
 const update = async (valor, cpf, id) => {
   const validation = valid.numberPositive(valor);
-  console.log(validation)
+ 
   if (validation !== true) {
     return { message: 'value must be positive and number' };
   }
