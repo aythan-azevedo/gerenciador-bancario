@@ -16,9 +16,19 @@ e entrar
 insira esse endereço no cliente que você está usando com a modalidade post.
 `http://localhost:3000/cadastro`
 e coloque o comando nele assim como no exemplo
-```{
+``` 
+{
   "nome": "ricardo",
   "cpf": 12345646853
 }
 ```
 exemplo: ![com sucesso](./public/create.png)
+
+==> se voce tentar fazer uma conta só com o cpf ou só com o nome a api retorna : 
+
+![sem sucesso](./public/sem-nome.png)
+![sem sucesso](./public/sem-cpf.png)
+
+==> se tentar cadastrar mais de uma conta por cpf a api retorna : 
+![sem sucesso](./public/registrado.png)
+
