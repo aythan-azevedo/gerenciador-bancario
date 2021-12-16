@@ -26,9 +26,18 @@ const getallAcounts = async () => {
   return con;
 };
 
+const deleteacount = async (id) => {
+  const deleteId = await connection()
+  .then((db) => db.collection('acount').deleteOne({ _id: ObjectId(id) }))
+  .then((result) => ({ result }));
+
+  return deleteId;
+};
+
 
 module.exports = {
   getByCPF,
   createAcount,
   getallAcounts,
+  deleteacount,
 };
