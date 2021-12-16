@@ -19,7 +19,7 @@ e coloque o comando nele assim como no exemplo
 ``` 
 {
   "nome": "ricardo",
-  "cpf": 12345646853
+  "cpf": 78945612305
 }
 ```
 ==> crie 2 usuarios para testar a transferencia depois
@@ -46,7 +46,7 @@ exemplo: ![com sucesso](./public/create.png)
 ==> e coloque o comando nele assim como no exemplo com o id da conta que você criou anteriormente , valor do deposito e o cpf.
 ``` 
 {	
-	"id": "61bba79e1e4fd9cdabad3416",
+	"id": "{id fornecido pela sua maquina no cliente}",
   "valor": 2000,
   "cpf": 78945612305
 }
@@ -96,9 +96,9 @@ exemplo: ![com sucesso](./public/create.png)
 
 ==> támbem é possivel deletar a conta atravéz do endpoint com o id da conta:
 
-`http://localhost:3000/delete/61bba79e1e4fd9cdabad3416`
+`http://localhost:3000/delete/{id fornecido pela sua maquina no cliente}`
 onde o id tem que ser adcionado como parametro na url
-
+![delete](./public/delete.png)
 
 ==> por fim quero agradecer por ter chegado até aqui e comente no codigo dicas se achar que posso melhorar.
 
