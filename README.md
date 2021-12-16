@@ -13,9 +13,11 @@ e entrar
 - é necessario instalar as depensencias do node.js com o comando: `npm install node`
 - inicie o projeto com o comando `npm start`
 ## criando um usuario 
-
-```
+insira esse endereço no cliente que você está usando com a modalidade post.
+`http://localhost:3000/cadastro`
+e coloque o comando nele assim como no exemplo
+```{
   "nome": "ricardo",
   "cpf": 12345646853
-
+}
 ```
