@@ -46,4 +46,6 @@ e coloque o comando nele assim como no exemplo com o id da conta que você criou
 ```
 ![sem sucesso](./public/deposito-sucesso.png)
 
-==> se o valor do deposito for negativo a api retorna a seguinte menssagem; 
+==> se o valor do deposito for negativo a api retorna a seguinte menssagem;
+
+![sem sucesso](./public/deposito-negativo.png)
