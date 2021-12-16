@@ -44,8 +44,19 @@ e coloque o comando nele assim como no exemplo com o id da conta que você criou
   "cpf": 78945612305
 }
 ```
-![sem sucesso](./public/deposito-sucesso.png)
+![sucesso](./public/deposito-sucesso.png)
 
-==> se o valor do deposito for negativo a api retorna a seguinte menssagem;
+==> se o valor do deposito for negativo a api retorna a seguinte menssagem.
 
 ![sem sucesso](./public/deposito-negativo.png)
+
+==> se o valor for maior que 2000 a api retorna a seguinte mensagem.
+
+![sem sucesso](./public/>2000.png)
+
+==> se o saldo da conta for maior que 10000 a api não permite mais depositos
+![sem sucesso](./public/10000.png)
+==>
+![sem sucesso](./public/+10000.png)
+
+## Transferir
