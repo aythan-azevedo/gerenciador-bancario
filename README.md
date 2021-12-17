@@ -1,18 +1,18 @@
 # gerenciador-bancario
-Bem vindo ao meu projeto que simula um registro de contas bancarias com função de deposito e transferencia básica
+Bem vindo ao meu projeto que simula um registro de contas bancarias com função de deposito e transferência básica
 ## Habilidades
 Neste projeto usei de API's REST com um modelo MSC.
-usei o node.js com o express para faze-lo, usei um banco não relacional mongodb.
+usei o node.JS com o express para faze-lo, usei um banco não relacional MongoDB.
 ## clone
 faça o clone do projeto com o seguinte comando em seu terminal 
 `git clone git@github.com:aythan-azevedo/gerenciador-bancario.git`
 e entrar
 `cd gerenciador-bancario`
-## Necessario
+## Necessário
 -para conseguir execultar o projeto você vai precisar de um simulador de cliente como o insominia ou o postaman
-- é necessario instalar as depensencias do node.js com o comando: `npm install node`
+- é necessário instalar as dependências do node.js com o comando: `npm install node`
 - inicie o projeto com o comando `npm start`
-## criando um usuario 
+## criando um usuário 
 insira esse endereço no cliente que você está usando com a modalidade post.
 `http://localhost:3000/cadastro`
 e coloque o comando nele assim como no exemplo
@@ -22,7 +22,7 @@ e coloque o comando nele assim como no exemplo
   "cpf": 78945612305
 }
 ```
-==> crie 2 usuarios para testar a transferencia depois
+==> crie 2 usuários para testar a transferência depois
 ``` 
 {
   "nome": "aylana",
@@ -94,10 +94,10 @@ exemplo: ![com sucesso](./public/create.png)
 ==> você pode pegar todas as contas criadas pelo endpont com o verbo GET ao invez de post ou put:
 `http://localhost:3000/users`
 
-==> támbem é possivel deletar a conta atravéz do endpoint com o id da conta:
+==> támbem é possivel deletar a conta através do endpoint com o id da conta:
 
 `http://localhost:3000/delete/{id fornecido pela sua maquina no cliente}`
-onde o id tem que ser adcionado como parametro na url
+onde o id tem que ser adcionado como parâmetro na url
 ![delete](./public/delete.png)
 
 ==> por fim quero agradecer por ter chegado até aqui e comente no codigo dicas se achar que posso melhorar.
