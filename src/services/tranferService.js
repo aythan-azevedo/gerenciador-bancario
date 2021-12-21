@@ -22,8 +22,9 @@ const update = async (valor, pagador_cpf, beneficiado_cpf) => {
     return { message: 'acount receiver not exist' };
   }
 
-const  positiveSaldo = validSaldo.saldoPositivo(valor,pagador_cpf)
+const  positiveSaldo = await validSaldo.saldoPositivo(valor,pagador_cpf)
 // aqui verifico se tem saldo dispponivel para a transferencia
+
 if (positiveSaldo === true) {
   return { message: 'no funds' };
 }
