@@ -1,6 +1,6 @@
 const { ObjectId } = require('mongodb');
 const { connection } = require('./connection');
-const { getByCPF } = require('./userModel')
+const { getByCPF } = require('./user')
 
 // nessa model nós alteramos o banco de dados para fim dos depositos e transferências.
 const updateSaldo = async (valor, cpf, id) => {

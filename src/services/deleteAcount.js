@@ -1,4 +1,4 @@
-const userModel = require('../models/userModel')
+const userModel = require('../models/user')
 const { ObjectId } = require('mongodb');
 
 const deleteId = async (id) => {

@@ -1,4 +1,4 @@
-const transferService = require('../services//tranferService');
+const transferService = require('../services/tranfer');
 // recebe a infromação do service e rerona ela para o cliente com o respectivo codigo REST
 
 const updateTrans = async (req, res) => {

@@ -13,11 +13,11 @@ const getByCPF = async (cpf) => {
 // crio uma ocnta a partir do nome e cpf
 const createAcount = async ({ nome, cpf }) => {
   const saldo = 0;
-  const resultado = await connection()
+  const result = await connection()
   .then((db) => db.collection('acounts').insertOne({nome, cpf, saldo }));
 
   return getByCPF(cpf);
-  return resultado;
+  return result;
 };
 // pego todas as contas  por meio do find e deixo bonito com o toArray
 const getallAcounts = async () => {

@@ -3,7 +3,7 @@ const { Router } = require('express');
 
 const router = Router();
 
-const deleteController = require('../controllers/deleteController');
+const deleteController = require('../controllers/delete');
 
 router.delete('/:id', deleteController.deleteId);
 

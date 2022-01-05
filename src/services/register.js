@@ -1,5 +1,5 @@
-const userModel = require('../models/userModel');
-const valid = require('../middlewares/cadastroValidate')
+const userModel = require('../models/user');
+const valid = require('../middlewares/registerValidate')
 
 const createAcount = async (nome, cpf) => {
   const validation = valid.mandatory(nome,cpf);

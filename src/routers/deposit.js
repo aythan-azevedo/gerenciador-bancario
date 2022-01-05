@@ -3,9 +3,9 @@ const { Router } = require('express');
 
 const router = Router();
 
-const depositoController = require('../controllers/depositoModel');
+const depositController = require('../controllers/deposit');
 
-router.put('/', depositoController.update);
+router.put('/', depositController.update);
 
 
 module.exports = router; 

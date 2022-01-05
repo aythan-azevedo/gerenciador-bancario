@@ -1,11 +1,11 @@
-const depositoService = require('../services/depositoService');
+const depositService = require('../services/deposit');
 // recebe a infromação do service e rerona ela para o cliente com o respectivo codigo REST
 
 const update = async (req, res) => {
   const { valor, cpf, id } = req.body;
 
-  const acount = await depositoService.update(valor, cpf, id );
-  console.log(acount)
+  const acount = await depositService.update(valor, cpf, id );
+
   if (acount.message) {
       return res.status(400).json(acount);
   }

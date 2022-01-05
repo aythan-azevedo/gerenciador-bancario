@@ -1,6 +1,6 @@
-const userModel = require('../models/userModel');
-const valid = require('../middlewares/cadastroValidate')
-const depositoModel = require('../models/depositoModel')
+const userModel = require('../models/user');
+const valid = require('../middlewares/registerValidate')
+const depositoModel = require('../models/deposit')
 
 const update = async (valor, cpf, id) => {
   const validation = valid.numberPositive(valor);

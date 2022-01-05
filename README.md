@@ -14,7 +14,7 @@ e entrar
 - inicie o projeto com o comando `npm start`
 ## criando um usuário 
 insira esse endereço no cliente que você está usando com a modalidade post.
-`http://localhost:3000/cadastro`
+`http://localhost:3000/register`
 e coloque o comando nele assim como no exemplo
 ``` 
 {
@@ -42,7 +42,7 @@ exemplo: ![com sucesso](./public/create.png)
 ## Deposito 
 
 ==> insira esse endereço no cliente que você está usando com a modalidade put.
-`http://localhost:3000/deposito`
+`http://localhost:3000/deposit`
 ==> e coloque o comando nele assim como no exemplo com o id da conta que você criou anteriormente , valor do deposito e o cpf.
 ``` 
 {	

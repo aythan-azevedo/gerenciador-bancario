@@ -3,7 +3,7 @@ const { Router } = require('express');
 
 const router = Router();
 
-const transferController = require('../controllers/transfercontroller');
+const transferController = require('../controllers/transfer');
 
 router.put('/', transferController.updateTrans);
 
