@@ -2,14 +2,18 @@
 Bem vindo ao meu projeto que simula um registro de contas bancarias com função de deposito e transferência básica
 ## Habilidades
 Neste projeto usei de API's REST com um modelo MSC.
-usei o node.JS com o express para faze-lo, usei um banco não relacional MongoDB.
+usei o node.JS  que é a ferramenta do Google Chrome responsável por ler e executar as instruções que escrevo em JavaScript,ele é um runteme  do JavaScript
+usei o express que  é um framework Node.js criado para facilitar a criação de APIs HTTP com Node.
+usei um banco não relacional MongoDB para armazenar os dados.
 ## clone
 faça o clone do projeto com o seguinte comando em seu terminal 
 `git clone git@github.com:aythan-azevedo/gerenciador-bancario.git`
 e entrar
 `cd gerenciador-bancario`
 ## Necessário
--para conseguir execultar o projeto você vai precisar de um simulador de cliente como o insominia ou o postaman
+-para conseguir execultar o projeto você vai precisar de um simulador de cliente como o insominia 
+==> https://www.bitbaru.com/site/como-instalar-o-insomnia-no-linux-crie-solicitaes-http-e-obtenha-informaes-detalhadas/
+
 - é necessário instalar as dependências do node.js com o comando: `npm install node`
 - inicie o projeto com o comando `npm start`
 ## criando um usuário 
