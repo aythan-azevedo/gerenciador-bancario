@@ -12,6 +12,7 @@ e entrar
 `cd gerenciador-bancario`
 ## Necessário
 -para conseguir execultar o projeto você vai precisar de um simulador de cliente como o insominia 
+
 ==> https://www.bitbaru.com/site/como-instalar-o-insomnia-no-linux-crie-solicitaes-http-e-obtenha-informaes-detalhadas/
 
 - é necessário instalar as dependências do node.js com o comando: `npm install node`
